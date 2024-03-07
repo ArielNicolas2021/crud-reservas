@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto Penal | Reservar turno</title>
+    <link rel="stylesheet" href="css/altas.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-btn" id="menuBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                </svg>
+            </div>
+            <div class="logo"><img src="./images/logo-puntopenal.ico" alt="logo"></div>
+        </nav>
+        <ul class="navbar-items" id="navbarItems">
+            <li><a href="altas.html">Reservar</a></li>
+            <li><a href="listado.html">Ver Reservas</a></li>
+            <li><a href="listadoEliminar.html">Eliminar</a></li>
+            <li><a href="modificaciones.html">Editar</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Agregar una reserva</h1>
+        </div>
+        <div class="reserva">
+            <!--enctype="multipart/form-data es necesario para enviar archivos al back.-->
+            <form id="formulario" enctype="multipart/form-data" class="reserva-form">
+                <label for="turno">Turno:</label>
+                <input type="text" id="turno" name="turno" required>
+        
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+        
+                <label for="hora">Hora:</label>
+                <select name="hora" id="hora">
+                    <option value="">Elegí un horario...</option>
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="19:00">19:00</option>
+                    <option value="20:00">20:00</option>
+                    <option value="21:00">21:00</option>
+                    <option value="22:00">22:00</option>
+                </select>
+        
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido">
+        
+                <label for="pago">Pago / Pendiente:</label>
+                <select name="pago" id="pago">
+                    <option value="Pago">Pago</option>
+                    <option value="Pendiente">Pendiente</option>
+                </select>
+                <button type="submit" class="reserva-form-btn">Agregar Producto</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/altas.js"></script>
+</body>
+</html>

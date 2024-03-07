@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto Penal | Reservas</title>
+    <link rel="stylesheet" href="css/listado.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="menu-btn" id="menuBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="4em" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                </svg>
+            </div>
+            <div class="logo"><img src="./images/logo-puntopenal.ico" alt="logo"></div>
+        </nav>
+        <ul class="navbar-items" id="navbarItems">
+            <li><a href="altas.html">Reservar</a></li>
+            <li><a href="listado.html">Ver Reservas</a></li>
+            <li><a href="listadoEliminar.html">Eliminar</a></li>
+            <li><a href="modificaciones.html">Editar</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="title">
+            <h1>Listado de Reservas</h1>
+        </div>
+        <div class="reservas">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Turno</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>                
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Pago / Pendiente</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaReservas">
+                    
+                </tbody>
+            </table>        
+        </div>
+    </main>
+    <script src="js/navbar.js"></script>
+    <script src="js/listado.js"></script>
+
+</body>
+</html>
