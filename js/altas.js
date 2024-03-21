@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:5000/"
+const URL = "https://ariel2024.pythonanywhere.com/"
 
 // Capturamos el evento de envío del formulario
 document.getElementById('formulario').addEventListener('submit', function (event) {
