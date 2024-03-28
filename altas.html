@@ -22,8 +22,8 @@
         <ul class="navbar-items" id="navbarItems">
             <li><a href="altas.html">Reservar</a></li>
             <li><a href="listado.html">Ver Reservas</a></li>
-            <li><a href="listadoEliminar.html">Eliminar</a></li>
             <li><a href="modificaciones.html">Editar</a></li>
+            <li><a href="listadoEliminar.html">Eliminar</a></li>          
         </ul>
     </header>
     <main>
@@ -33,28 +33,12 @@
         <div class="reserva">
             <!--enctype="multipart/form-data es necesario para enviar archivos al back.-->
             <form id="formulario" enctype="multipart/form-data" class="reserva-form">
-                <label for="turno">Turno:</label>
-                <input type="text" id="turno" name="turno" required>
         
                 <label for="fecha">Fecha:</label>
                 <input type="date" id="fecha" name="fecha" required>
         
                 <label for="hora">Hora:</label>
-                <select name="hora" id="hora">
-                    <option value="">Elegí un horario...</option>
-                    <option value="08:00">08:00</option>
-                    <option value="09:00">09:00</option>
-                    <option value="10:00">10:00</option>
-                    <option value="11:00">11:00</option>
-                    <option value="12:00">12:00</option>
-                    <option value="16:00">16:00</option>
-                    <option value="17:00">17:00</option>
-                    <option value="18:00">18:00</option>
-                    <option value="19:00">19:00</option>
-                    <option value="20:00">20:00</option>
-                    <option value="21:00">21:00</option>
-                    <option value="22:00">22:00</option>
-                </select>
+                <input type="time" id="hora" name="hora" list="hour" required>
         
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -67,9 +51,39 @@
                     <option value="Pago">Pago</option>
                     <option value="Pendiente">Pendiente</option>
                 </select>
-                <button type="submit" class="reserva-form-btn">Agregar Producto</button>
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <button type="submit" class="reserva-form-btn">Reservar</button>
             </form>
         </div>
+
+        <datalist id="hour">
+            <option value="00:00"></option>
+            <option value="01:00"></option>
+            <option value="02:00"></option>
+            <option value="03:00"></option>
+            <option value="04:00"></option>
+            <option value="05:00"></option>
+            <option value="06:00"></option>
+            <option value="07:00"></option>
+            <option value="08:00"></option>
+            <option value="09:00"></option>
+            <option value="10:00"></option>
+            <option value="11:00"></option>
+            <option value="12:00"></option>
+            <option value="13:00"></option>
+            <option value="14:00"></option>
+            <option value="15:00"></option>
+            <option value="16:00"></option>
+            <option value="17:00"></option>
+            <option value="18:00"></option>
+            <option value="19:00"></option>
+            <option value="20:00"></option>
+            <option value="21:00"></option>
+            <option value="22:00"></option>
+            <option value="23:00"></option>
+        </datalist>
     </main>
 
     <script src="js/navbar.js"></script>

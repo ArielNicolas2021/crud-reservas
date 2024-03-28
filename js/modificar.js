@@ -1,62 +1,63 @@
-const URL = "https://ariel2024.pythonanywhere.com/"
+const URL = "http://127.0.0.1:5000/"
 
 const app = Vue.createApp({
     data() {
         return {
-            turno: '',
             fecha: '',
             hora: '',
             nombre: '',
             apellido: '',
             pago: '',
+            correo: '',
             imagenUrlTemp: null,
             mostrarDatosReserva: false,
         };
     },
     methods: {
         obtenerReserva() {
-            fetch(URL + 'reservas/' + this.turno)
+            fetch(URL + 'reservas/' + this.id)
                 .then(response => response.json())
                 .then(data => {
-                    this.turno = data.turno;
                     this.fecha = data.fecha;
                     this.hora = data.hora;
                     this.nombre = data.nombre;
                     this.apellido = data.apellido;
                     this.pago = data.pago;
+                    this.correo = data.correo;
                     this.mostrarDatosReserva = true;
                 })
                 .catch(error => console.error('Error:', error));
         },
         guardarCambios() {
             const formData = new FormData();
-            formData.append('turno', this.turno);
             formData.append('fecha', this.fecha);
             formData.append('hora', this.hora);
             formData.append('nombre', this.nombre);
             formData.append('apellido', this.apellido);
             formData.append('pago', this.pago);
+            formData.append('correo', this.correo);
 
-            fetch(URL + 'reservas/' + this.turno, {
+            fetch(URL + 'reservas/' + this.id, {
                 method: 'PUT',
                 body: formData,
             })
                 .then(response => response.json())
                 .then(data => {
-                    alert('Producto actualizado correctamente');
+                    alert('Reserva actualizada correctamente');
                     this.limpiarFormulario();
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('Error al actualizar el producto');
+                    alert('Error al actualizar la reserva');
                 });
         },
         limpiarFormulario() {
-            this.turno = '';
             this.fecha = '';
             this.hora = '';
             this.nombre = '';
             this.apellido = '';
+            this.pago = '';
+            this.correo = '';
             this.imagenSeleccionada = null;
             this.imagenUrlTemp = null;
             this.mostrarDatosProducto = false;

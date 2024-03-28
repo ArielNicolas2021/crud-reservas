@@ -1,4 +1,4 @@
-const URL = "https://ariel2024.pythonanywhere.com/"
+const URL = "http://127.0.0.1:5000/"
 // Realizamos la solicitud GET al servidor para obtener todas las reservas
 fetch(URL + 'reservas')
     .then(function (response) {
@@ -10,16 +10,17 @@ fetch(URL + 'reservas')
         // Iteramos sobre las reservas y agregamos filas a la tabla
         for (let reserva of data) {
             let fila = document.createElement('tr');
-            fila.innerHTML = '<td>' + reserva.turno + '</td>' +
+            fila.innerHTML = '<td title="id">' + reserva.id + '</td>'+
                 '<td>' + reserva.fecha + '</td>' +
                 '<td>' + reserva.hora + '</td>' +
-                '<td>' + reserva.nombre + '</td>' +
-                '<td>' + reserva.apellido + '</td>' +
-                '<td>' + reserva.pago + '</td>'
+                '<td title="nombre">' + reserva.nombre + '</td>' +
+                '<td title="apellido">' + reserva.apellido + '</td>' +
+                '<td title="pago">' + reserva.pago + '</td>' +
+                '<td title="correo">' + reserva.correo + '</td>'
             tablaReservas.appendChild(fila);
         }
     })
     .catch(function (error) {
         // Código para manejar errores
-        alert('Error al obtener los productos.');
+        alert('Error al obtener las reservas.');
     });

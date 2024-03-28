@@ -7,20 +7,19 @@
     list-style: none;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
-    font-size: 16px;
+    background-image: url("/images/estela.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #EEEEEE;
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
 }
 
 /* Header & Navbar */
 header {
-    background-color: #ffffff;
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
@@ -33,55 +32,67 @@ header {
     margin-left: 2rem;
 }
 
+svg {
+    fill: white;
+}
+
 .navbar-items {
-    display: none;
+    height: 0;
+    overflow: hidden;
     margin-left: 2rem;
+    transition: height 1s ease;
+}
+
+.open-navbar {
+    height: 15rem;
 }
 
 .navbar-items a {
-    color: #222831;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.5;
+    transition: color .2s ease;
 }
 
 .navbar-items a:hover {
-    color: #00ADB5;
+    color: #caa800;
 }
 
 .logo {
-    width: 10rem;
-    height: 10rem;
+    width: 100px;
+    height: 100px;
     margin-right: 2rem;
 }
 
 img {
-    width: 10rem;
+    width: 100px;
 }
+
 
 /* Main style */
 .title {
+    color: white;
     text-align: center;
-}
-
-.reservas {
-    width: 100%;
+    margin: 1rem 0 0 0;
 }
 
 .tabla {
     background-color: #ffffff;
     text-align: left;
-    margin: 1rem;
+    margin: 1rem auto;
     border: 1px solid #222831;
     border-collapse: collapse;
+    width: 90%;
+    font-size: 16px;
 }
 
 th, td {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
-thead {
-    background-color: #00ADB5;
+thead > tr {
+    background-color: #caa800;
     color: #ffffff;
     border-bottom: 5px solid #222831;
 }
@@ -91,34 +102,65 @@ tr:nth-child(even) {
     color: #222831;
 }
 
+tbody > tr {
+    padding: 0 0 0 1rem;
+}
+
+/* Responsive table */
+table, thead, tbody, tr, td {
+    display: block;
+}
+
+thead tr th {
+    display: none;
+}
+
+tbody tr td:nth-child(1) {
+    display: none;
+}
+
+tbody th {
+    display: inline-block;
+    width: 34%;
+}
+
+tbody td:nth-child(2),
+tbody td:nth-child(3) {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}
+
+thead tr th:nth-child(2),
+thead tr th:nth-child(3) {
+    display: inline-block;
+    width: 49%;
+    padding: 2% 5%;
+    text-align: center;
+}
+
+tbody td:nth-of-type(n+4) {
+    font-size: 12px;
+}
+
+tbody td:nth-of-type(n+4)::before {
+    content: attr(title)": ";
+    font-weight: 600;
+}
+
+/* hover carrousel */
+tbody tr {
+    height: 4rem;
+    overflow: hidden;
+    transition: height 1s ease;
+}
+
+tbody tr:hover {
+    height: 16rem;
+}
+
 /* Desktop style */
 @media(min-width: 769px){
-    header {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        width: 25rem;
-        padding: 2rem 0 0 2rem;
-    }
-    
-    .menu-btn {
-        display: none;
-    }
-
-    .logo {
-        width: 20rem;
-        height: 20rem;
-    }
-    img {
-        width: 20rem;
-    }
-
-
-    .navbar-items {
-        display: block;
-        margin-left: 0;
-    }
-
     body {
         display: flex;
     }
@@ -131,11 +173,99 @@ tr:nth-child(even) {
         width: 100%;
     }
 
-    .reservas {
-        width: auto;
+    header {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        padding: 0 1rem 0 0;
+    }
+    
+    .menu-btn {
+        display: none;
     }
 
-    th, td {
-        padding: 20px;
+    .logo {
+        width: 200px;
+        height: 200px;
+        margin: 0;
     }
+    img {
+        width: 200px;
+    }
+
+    .navbar-items {
+        display: block;
+        margin-left: 0;
+        height: auto;
+        padding: 0 0 0 1rem;
+        width: 15rem;
+    }
+
+    .navbar-items a {
+        font-size: 2rem;
+        line-height: 2;
+    }
+
+    .reservas {
+        width: 100%;
+    }
+
+    /* Responsive table */
+    table {
+        display: table;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+    
+    tbody {
+        display: table-row-group;
+    }
+
+    tbody tr td:nth-child(n) {
+        font-size: .7rem;
+    }
+
+    tr {
+        display: table-row;
+    }
+
+    td,
+    tbody tr td:nth-child(n),
+    thead tr th,
+    tbody td:nth-child(n) {
+        display: table-cell;
+    }
+
+    thead tr th:nth-child(n) {
+        display: table-cell;
+        width: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    td {
+        padding: 1rem;
+    }
+
+    tbody td:nth-of-type(n) {
+        font-size: 1rem;
+    }
+
+    tbody td:nth-of-type(n)::before {
+        content: "";
+        font-weight: initial;
+    }
+
+    /* hover carrousel */
+    tbody tr {
+        height: auto;
+        overflow: initial;
+    }
+
+    tbody tr:hover {
+        height: auto;
+    }
+
 }

@@ -1,4 +1,4 @@
-const URL = "https://ariel2024.pythonanywhere.com/"
+const URL = "http://127.0.0.1:5000/"
 
 const app = Vue.createApp({
     data() {
@@ -23,12 +23,12 @@ const app = Vue.createApp({
                     alert('Error al obtener las reservas.');
                 });
         },
-        eliminarReserva(turno) {
-            if (confirm('¿Estás seguro de que quieres eliminar esta reserva?')) {
-                fetch(URL + `reservas/${turno}`, { method: 'DELETE' })
+        eliminarReserva(correo) {
+            if (confirm('¿Estás seguro de que queres eliminar esta reserva?')) {
+                fetch(URL + `reservas/${correo}`, { method: 'DELETE' })
                     .then(response => {
                         if (response.ok) {
-                            this.reservas = this.reservas.filter(reserva => reserva.turno !== turno);
+                            this.reservas = this.reservas.filter(reserva => reserva.correo !== correo);
                             alert('Reserva eliminada correctamente.');
                         }
                     })

@@ -7,20 +7,18 @@
     list-style: none;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
-    font-size: 16px;
+    background-image: url("/images/estela.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #EEEEEE;
     font-family: 'Poppins', sans-serif;
 }
 
 /* Header & Navbar */
 header {
-    background-color: #ffffff;
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar {
@@ -33,41 +31,56 @@ header {
     margin-left: 2rem;
 }
 
+svg {
+    fill: white;
+}
+
 .navbar-items {
-    display: none;
+    height: 0;
+    overflow: hidden;
     margin-left: 2rem;
+    transition: height 1s ease;
+}
+
+.open-navbar {
+    height: 15rem;
 }
 
 .navbar-items a {
-    color: #222831;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.5;
+    transition: color .2s ease;
 }
 
 .navbar-items a:hover {
-    color: #00ADB5;
+    color: #caa800;
 }
 
 .logo {
-    width: 10rem;
-    height: 10rem;
+    width: 100px;
+    height: 100px;
     margin-right: 2rem;
 }
 
 img {
-    width: 10rem;
+    width: 100px;
 }
 
 /* Main */
 .title {
+    color: white;
     text-align: center;
+    margin: 1rem 0 0 0;
 }
 
 .reserva {
-    border: 1px solid #222831;
+    border: 1px solid #ffffff;
     border-radius: 2rem;
     margin: 1rem 3rem;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .reserva-form {
@@ -84,24 +97,27 @@ img {
 
 input,
 select {
-    height: 3.5rem;
+    height: 3rem;
     background-color: #d9d9d9;
     border: none;
     border-radius: 2rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 .reserva-form-btn {
-    height: 4rem;
-    background-color: #00ADB5;
+    height: 3rem;
+    background-color: #caa800;
     border: none;
     border-radius: 2rem;
     color: #ffffff;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color .3s ease;
 }
 
 .reserva-form-btn:hover {
-    background-color: #393E46;
+    background-color: #9c8200;
 }
 
 
@@ -112,7 +128,6 @@ select {
         flex-direction: column;
         height: 100vh;
         width: 25rem;
-        padding: 2rem 0 0 2rem;
     }
     
     .menu-btn {
@@ -120,16 +135,23 @@ select {
     }
 
     .logo {
-        width: 20rem;
-        height: 20rem;
+        width: 200px;
+        height: 200px;
+        margin: 0;
     }
     img {
-        width: 20rem;
+        width: 200px;
     }
 
     .navbar-items {
         display: block;
-        margin-left: 0;
+        margin: 0 0 0 1rem;
+        height: auto;
+    }
+
+    .navbar-items a {
+        font-size: 2rem;
+        line-height: 2;
     }
 
     body {
@@ -145,32 +167,33 @@ select {
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .reserva-form {
         display: grid;
         grid-template-columns: 25% 75%;
         grid-template-rows: repeat(3, 1fr);
-        gap: 2.5rem;
+        gap: 2rem;
     }
 
     label {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        color: white;
         display: flex;
         align-items: center;
     }
 
     input,
     select {
-        height: 5rem;
-        font-size: 2rem;
+        height: 3rem;
+        font-size: 1.5rem;
         margin-right: 1rem;
     }
 
     .reserva-form-btn {
-        height: 5rem;
-        font-size: 2rem;
+        height: 3rem;
+        font-size: 1.5rem;
         grid-column: 1 / 3;
         margin: 0 2rem;
     }

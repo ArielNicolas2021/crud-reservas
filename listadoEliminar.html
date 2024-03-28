@@ -22,8 +22,8 @@
         <ul class="navbar-items" id="navbarItems">
             <li><a href="altas.html">Reservar</a></li>
             <li><a href="listado.html">Ver Reservas</a></li>
-            <li><a href="listadoEliminar.html">Eliminar</a></li>
             <li><a href="modificaciones.html">Editar</a></li>
+            <li><a href="listadoEliminar.html">Eliminar</a></li>           
         </ul>
     </header>
     <main>
@@ -33,24 +33,23 @@
         <div class="eliminar">
             <table class="tabla">
                 <thead>
-                    <tr>
-                        <th>Turno</th>
                         <th>Fecha</th>
                         <th>Hora</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Pago / Pendiente</th>
+                        <th>Correo</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="reserva in reservas">
-                        <td>{{ reserva.turno }}</td>
                         <td>{{ reserva.fecha }}</td>
                         <td>{{ reserva.hora }}</td>
                         <td>{{ reserva.nombre }}</td>
-                        <td>{{ reserva.apellido }}</td>
-                        <td>{{ reserva.pago }}</td>
-                        <td><button @click="eliminarReserva(reserva.turno)" class="eliminar-btn">X</button></td>
+                        <td title="apellido">{{ reserva.apellido }}</td>
+                        <td title="pago">{{ reserva.pago }}</td>
+                        <td title="correo">{{ reserva.correo }}</td>
+                        <td><button @click="eliminarReserva(reserva.id)" class="eliminar-btn">X</button></td>
                     </tr>
                 </tbody>
             </table>

@@ -1,8 +1,12 @@
-# CRUD de reservas de usuarios
-el link del sitio es https://arielnicolas2021.github.io/crud-reservas/
-## Imagenes del sitio
-![](images/index.png)
-![](images/altas.png)
-![](images/listado.png)
-![](images/eliminar.png)
-![](images/modificaciones.png)
+# CRUD Punto Penal
+Este repositorio es para el Grupo 4 de Codo a Codo.
+
+# Integrantes:
+- Ariel Aguilar
+- Armando Ceferino Lafuente
+- Sebastian Dugo
+- Tiziana Benegas
+- Santiago Collantonio
+- Nicole Molenberg
+
+# Pagina para visitar el proyecto:

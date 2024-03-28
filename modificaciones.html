@@ -22,8 +22,8 @@
         <ul class="navbar-items" id="navbarItems">
             <li><a href="altas.html">Reservar</a></li>
             <li><a href="listado.html">Ver Reservas</a></li>
-            <li><a href="listadoEliminar.html">Eliminar</a></li>
             <li><a href="modificaciones.html">Editar</a></li>
+            <li><a href="listadoEliminar.html">Eliminar</a></li>
         </ul>
     </header>
     <main>
@@ -33,7 +33,7 @@
         <div class="editar">
             <div id="app">
                 <form @submit.prevent="obtenerReserva" class="obtener-reserva">
-                    <input type="text" v-model="turno" placeholder="Ingrese el turno a modificar" required>
+                    <input type="text" v-model="id" placeholder="Ingrese el ID a modificar" required>
                     <button type="submit" class="submit-btn">Buscar</button>
                 </form>
         
@@ -56,8 +56,11 @@
                         <select id="pagoModificar" v-model="pago">
                             <option value="Pago">Pago</option>
                             <option value="Pendiente">Pendiente</option>
+                            
                         </select>
-                        
+                        <label for="correoModificar">Correo:</label>
+                        <input type="text" id="correoModificar" v-model="correo" required>
+
                         <div class="center">
                             <button type="submit" class="modificar-btn">Guardar Cambios</button>
                             <a href="modificaciones.html" class="cancelar-btn">Cancelar</a>
@@ -71,6 +74,7 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/modificar.js"></script>
+    <script src="js/navbar.js"></script>
 
 </body>
 </html>

@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
 body {
     font-family: 'Poppins', sans-serif;
+    background-image: url(/images/piernas_fondo_negro.jpg);
     background-color: #EEEEEE;
+
+    
 }
 
 .contenedor-centrado {
@@ -13,14 +16,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #222831;
+    color: #ffffff;
 }
 
 table {
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(19, 16, 16);
     border: 1px solid lightslategray;
     border-radius: 5px;
 }
@@ -28,7 +31,7 @@ table {
 a {
     padding: 8px;
     margin:4px;
-    background-color: #00ADB5;
+    background-color: #caa800;
     color: #ffffff;
     border: none;
     border-radius: 5px;
