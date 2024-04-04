@@ -116,7 +116,7 @@ thead tr th {
     display: none;
 }
 
-tbody tr td:nth-child(1) {
+tbody tr td:nth-child(0) {
     display: none;
 }
 
@@ -125,26 +125,26 @@ tbody th {
     width: 34%;
 }
 
-tbody td:nth-child(2),
-tbody td:nth-child(3) {
+tbody td:nth-child(1),
+tbody td:nth-child(2) {
     display: inline-block;
     width: 49%;
     text-align: center;
 }
 
-thead tr th:nth-child(2),
-thead tr th:nth-child(3) {
+thead tr th:nth-child(1),
+thead tr th:nth-child(2) {
     display: inline-block;
     width: 49%;
     padding: 2% 5%;
     text-align: center;
 }
 
-tbody td:nth-of-type(n+4) {
+tbody td:nth-of-type(n+3) {
     font-size: 12px;
 }
 
-tbody td:nth-of-type(n+4)::before {
+tbody td:nth-of-type(n+3)::before {
     content: attr(title)": ";
     font-weight: 600;
 }
@@ -160,7 +160,7 @@ tbody tr {
 }
 
 tbody tr:hover {
-    height: 18rem;
+    height: 21rem;
 }
 
 .eliminar-btn {
@@ -188,15 +188,15 @@ tbody tr:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 100%;
+        margin: 0 0 0 20rem;
     }
 
     header {
         display: flex;
         flex-direction: column;
         height: 100vh;
-        padding: 0 1rem 0 0;
+        width: 20rem;
+        position: fixed;
     }
     
     .menu-btn {
@@ -214,10 +214,9 @@ tbody tr:hover {
 
     .navbar-items {
         display: block;
-        margin-left: 0;
+        margin-left: 1rem;
         height: auto;
         padding: 0 0 0 1rem;
-        width: 15rem;
     }
 
     .navbar-items a {
@@ -226,6 +225,10 @@ tbody tr:hover {
     }
 
     .reservas {
+        width: 100%;
+    }
+
+    .eliminar-btn {
         width: 100%;
     }
 

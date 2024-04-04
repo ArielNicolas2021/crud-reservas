@@ -210,6 +210,7 @@ select {
         flex-direction: column;
         position: fixed;
         height: 100vh;
+        width: 20rem;
     }
     
     .menu-btn {
@@ -226,7 +227,8 @@ select {
 
     .navbar-items {
         height: auto;
-        margin-left: 0;
+        margin-left: 1rem;
+        line-height: 4;
     }
 
     /* Editar reserva */

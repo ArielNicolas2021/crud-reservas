@@ -169,15 +169,15 @@ tbody tr:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        width: 100%;
+        margin: 0 0 0 20rem;
     }
 
     header {
         display: flex;
         flex-direction: column;
         height: 100vh;
-        padding: 0 1rem 0 0;
+        position: fixed;
+        width: 20rem;
     }
     
     .menu-btn {
