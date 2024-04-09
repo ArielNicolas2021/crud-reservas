@@ -167,7 +167,7 @@ tbody tr:hover {
     width: 94%;
     background-color: #ca2800;
     border: none;
-    border-radius: 2rem;
+    border-radius: 50%;
     color: #ffffff;
     padding: 1rem;
     transition: background-color .2s ease;
@@ -180,11 +180,8 @@ tbody tr:hover {
 
 /* Desktop style */
 @media(min-width: 769px){
-    body {
-        display: flex;
-    }
-
     main {
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
