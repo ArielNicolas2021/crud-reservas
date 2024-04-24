@@ -1,12 +1,22 @@
 # CRUD Punto Penal
-Este repositorio es para el Grupo 4 de Codo a Codo.
 
-# Integrantes:
-- Ariel Aguilar
-- Armando Ceferino Lafuente
-- Sebastian Dugo
-- Tiziana Benegas
-- Santiago Collantonio
-- Nicole Molenberg
+![Altas](./images/altas.png)
+![Eliminar](./images/eliminar.png)
 
-# Pagina para visitar el proyecto:
+## Descripción
+
+Crear, leer, modificar y eliminar reservas de una cancha de fútbol.
+
+## Tecnologías utilizadas
+
+- HTML
+- CSS
+- Javascript
+- Vue.js
+- SQL
+- Python
+- Flask
+
+## Link
+
+[https://arielnicolas2021.github.io/crud-reservas/](https://arielnicolas2021.github.io/crud-reservas/)
