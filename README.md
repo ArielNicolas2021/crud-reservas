@@ -1,7 +1,9 @@
 # CRUD Punto Penal
 
-![Altas](./images/altas.png)
-![Eliminar](./images/eliminar.png)
+[Link al sitio web](https://arielnicolas2021.github.io/crud-reservas/)
+
+![Altas](./assets/images/altas.png)
+![Listado](./assets/images/listado.png)
 
 ## Descripción
 
@@ -16,7 +18,3 @@ Crear, leer, modificar y eliminar reservas de una cancha de fútbol.
 - SQL
 - Python
 - Flask
-
-## Link
-
-[https://arielnicolas2021.github.io/crud-reservas/](https://arielnicolas2021.github.io/crud-reservas/)
